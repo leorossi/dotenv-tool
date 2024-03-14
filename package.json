@@ -1,7 +1,9 @@
 {
   "author": "Leonardo Rossi <leonardo.rossi@gmail.com",
   "description": "A tool to manipulate `.env` files",
-  "keywords": [ "dotenv" ],
+  "keywords": [
+    "dotenv"
+  ],
   "license": "Apache-2.0",
   "name": "dotenv-tool",
   "repository": {
@@ -25,7 +27,7 @@
     "lint": "standard src/* | snazzy",
     "test": "node --test --require ts-node/register ./test/*.test.ts"
   },
-  "version": "0.0.1",
+  "version": "0.0.2",
   "devDependencies": {
     "@types/node": "^20.11.26",
     "snazzy": "^9.0.0",
