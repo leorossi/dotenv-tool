@@ -1,9 +1,17 @@
 {
   "author": "Leonardo Rossi <leonardo.rossi@gmail.com",
-  "description": "",
-  "keywords": [],
+  "description": "A tool to manipulate `.env` files",
+  "keywords": [ "dotenv" ],
   "license": "Apache-2.0",
   "name": "dotenv-tool",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/leorossi/dotenv-tool.git"
+  },
+  "bugs": {
+    "url": "https://github.com/leorossi/dotenv-tool/issues"
+  },
+  "homepage": "https://github.com/leorossi/dotenv-tool#readme",
   "exports": {
     "require": "./build/cjs/index.js",
     "import": "./build/esm/index.js"
