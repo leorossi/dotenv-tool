@@ -124,9 +124,31 @@ export default class DotEnvTool {
     }
     updateKey(key, newValue) {
         const dataLine = this.findKey(key);
-        if (dataLine != null) {
+        if (dataLine !== undefined) {
             dataLine.data.value = newValue;
         }
+    }
+    deleteKey(key) {
+        let keyLineNumber;
+        const newContent = [];
+        this.contents.forEach((line) => {
+            if (Number.isInteger(keyLineNumber)) {
+                if (line.lineNumber > keyLineNumber) {
+                    line.lineNumber--;
+                }
+                newContent.push(line);
+            }
+            else {
+                if (line.type === 'data' && line.data.key === key) {
+                    keyLineNumber = line.lineNumber;
+                }
+                else {
+                    newContent.push(line);
+                }
+            }
+        });
+        this.nextLine--;
+        this.contents = newContent;
     }
     findKey(key) {
         const theKey = this.contents.find((line) => {
